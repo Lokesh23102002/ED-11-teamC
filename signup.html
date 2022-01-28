@@ -18,22 +18,22 @@
             <h1>
                 Sign up
             </h1>
-            
+
             <div class="sidebyside">
                 <div class="first">
-                    
+
                     <h3>Basic Details</h3>
                     <form action="">
                         <label for="">
                             Name
                         </label><br>
-                        <input type="text" class="inputboxs"><br><br>
+                        <input type="text" class="inputboxs" required><br><br>
                         <label for="">Surname</label><br>
-                        <input type="text" class="inputboxs"><br><br>
+                        <input type="text" class="inputboxs" required><br><br>
                         <label for="">Phone no</label><br>
-                        <input type="" class="inputboxs"><br><br>
+                        <input type="" class="inputboxs" required><br><br>
                         <label for="">DOB</label><br>
-                        <input type="date" class="inputboxs">
+                        <input type="date" class="inputboxs" required>
                     </form>
 
 
@@ -44,19 +44,39 @@
                         <label for="">
                             Username
                         </label><br>
-                        <input type="text" class="inputboxs"><br><br>
+                        <input type="text" class="inputboxs" required><br><br>
                         <label for="">Password</label><br>
-                        <input type="password" class="inputboxs"><br><br>
+                        <input type="password" class="inputboxs" id="password" required><br><br>
+                        <label for="">Confirm Password</label><br>
+                        <input type="password" class="inputboxs" id="confirmpassword" onkeyup='check();' required /><span
+                            id='message'></span><br><br>
+                        <label for="">Recover question?</label><br>
+                        <input type="text" class="inputboxs" required><br><br>
+                        <label for="">Recovery answer</label><br>
+                        <input type="text" class="inputboxs" required>
 
 
                     </form>
                 </div>
             </div>
             <div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class="click" >
             </div>
         </div>
     </div>
+    <script>
+        var check = function () {
+            if (document.getElementById('password').value ==
+                document.getElementById('confirmpassword').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'matching';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'not matching';
+            }
+        }
+    </script>
 </body>
+
 
 </html>

@@ -42,7 +42,7 @@
     margin: 0px;
 
 }
-#button{
+.click{
     height: 30px;
     width: 150px;
     background-color: #f6762b;
@@ -71,7 +71,7 @@
 
 }
 .second{
-    background-color: rgba(46, 184, 99, 0.74);
+    background-color: pink;
     height: 54vh;
     width: 30vw;
     text-align: left;
@@ -89,4 +89,9 @@
 }
 hr.solid {
     border-top: 3px solid #bbb;
+  }
+
+  h3{
+     margin-top: 8px;
+     margin-bottom: 5px;
   }
